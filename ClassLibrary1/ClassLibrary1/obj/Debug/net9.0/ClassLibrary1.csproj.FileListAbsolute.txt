@@ -1,0 +1,11 @@
+/Users/martin/Downloads/Kordamine/ClassLibrary1/ClassLibrary1/bin/Debug/net9.0/ClassLibrary1.deps.json
+/Users/martin/Downloads/Kordamine/ClassLibrary1/ClassLibrary1/bin/Debug/net9.0/ClassLibrary1.dll
+/Users/martin/Downloads/Kordamine/ClassLibrary1/ClassLibrary1/bin/Debug/net9.0/ClassLibrary1.pdb
+/Users/martin/Downloads/Kordamine/ClassLibrary1/ClassLibrary1/obj/Debug/net9.0/ClassLibrary1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/martin/Downloads/Kordamine/ClassLibrary1/ClassLibrary1/obj/Debug/net9.0/ClassLibrary1.AssemblyInfoInputs.cache
+/Users/martin/Downloads/Kordamine/ClassLibrary1/ClassLibrary1/obj/Debug/net9.0/ClassLibrary1.AssemblyInfo.cs
+/Users/martin/Downloads/Kordamine/ClassLibrary1/ClassLibrary1/obj/Debug/net9.0/ClassLibrary1.csproj.CoreCompileInputs.cache
+/Users/martin/Downloads/Kordamine/ClassLibrary1/ClassLibrary1/obj/Debug/net9.0/ClassLibrary1.dll
+/Users/martin/Downloads/Kordamine/ClassLibrary1/ClassLibrary1/obj/Debug/net9.0/refint/ClassLibrary1.dll
+/Users/martin/Downloads/Kordamine/ClassLibrary1/ClassLibrary1/obj/Debug/net9.0/ClassLibrary1.pdb
+/Users/martin/Downloads/Kordamine/ClassLibrary1/ClassLibrary1/obj/Debug/net9.0/ref/ClassLibrary1.dll
