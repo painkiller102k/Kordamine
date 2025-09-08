@@ -35,8 +35,6 @@ namespace Kordamine
 
 
 
-
-
             // List<string> nimed=new List<string>();
             //for (int i = 0; i < 10; i++)
             // {
