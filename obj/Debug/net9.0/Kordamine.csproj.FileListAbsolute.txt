@@ -26,3 +26,4 @@
 /Users/martin/Downloads/Kordamine/obj/Debug/net9.0/Kordamine.pdb
 /Users/martin/Downloads/Kordamine/obj/Debug/net9.0/Kordamine.genruntimeconfig.cache
 /Users/martin/Downloads/Kordamine/obj/Debug/net9.0/ref/Kordamine.dll
+/Users/martin/Downloads/Kordamine/obj/Debug/net9.0/Kordamine.sourcelink.json

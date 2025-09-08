@@ -15,97 +15,176 @@ namespace Kordamine
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             Random rnd = new Random(); // выполняется рандом
-            int kuu_number = rnd.Next(1, 12);
-            string nimetus = Osa1_funktsioonid.Kuu_nimetus(kuu_number);
-            Console.WriteLine($"Nr: {kuu_number}-{nimetus}");
-            Console.WriteLine("Kas tahad dekodeerida arv-->nimutusse ?");
-            string vastus = Console.ReadLine();
-            if (vastus.ToLower() != "jah")
+            //Funktsionid 2 Massiivid, List,  Kordused
+            //#1
+            int[] massive = Osa3.ArvuTootlus.GenereeriRuudud(-10, 10);
+            foreach (int m in massive)
             {
-                Console.WriteLine("Ei taha, siis ei taha");
+                Console.WriteLine(m);
             }
-            else
-            {
-                try
-                {
-                    Console.Write("Nr: ");
-                    kuu_number = int.Parse(Console.ReadLine());
-                    Console.Write(Osa1_funktsioonid.Hooaeg(kuu_number));
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
+            //#2
+            double[] arvud = Osa33.Tekstist_arvud();
+            var tulemus = Osa33.AnaluusiArve(arvud);
+            Console.WriteLine($"Summa : {tulemus.Item1:F2}, Keskmine : {tulemus.Item2:F2}, Korrutis : {tulemus.Item3:F2}");
 
-            }
 
-            Console.WriteLine("Mis on sinu nimi on: ?");
-            string vastus2 = Console.ReadLine();
-            if (vastus2.ToLower() != "juku")
-            {
-                Console.WriteLine("Me ei lähe kinno!");
-            }
-            else
-            {
-                try
-                {
-                    Console.Write("Kui vana sa oled : ?");
-                    int vastus3 = int.Parse(Console.ReadLine());
-                    Console.Write(Osa1_funktsioonid.Juku(vastus3));
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
-            }
 
-            Console.WriteLine("Mis on sinu nimi on: ?");
-            string nimi1 = Console.ReadLine();
-            Console.WriteLine("Aga mis on sinu nimi on: ?");
-            string nimi2 = Console.ReadLine();
-            if (nimi1.ToLower() == "martin" || nimi2.ToLower() == "illia")
-            {
-                Console.WriteLine("Te olete naabrid!");
-            }
-            else
-            {
-                Console.WriteLine("Ei olete naabrid!");
-            }
 
-            Console.WriteLine("Sisesta esimese seina pikkus: ");
-            int seina1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Sisesta teine seina pikkus: ");
-            int seina2 = int.Parse(Console.ReadLine());
-            int põrandapind = seina1 * seina2;
-            Console.WriteLine("Kas soovite teha remonti?");
-            string vastuss = Console.ReadLine();
-            if (vastuss.ToLower() != "jah")
-            {
-                Console.WriteLine("Ei taha, siis ei taha");
-            }
-            else
-            {
-                Console.WriteLine("Kui palju maksab ruutmeetri: ?");
-                int ruutmeentri = int.Parse(Console.ReadLine());
-                int hind = põrandapind / ruutmeentri;
-                Console.WriteLine($"Põranda vahetamise maksumus: {hind}");
-            }
 
-            Console.WriteLine("Kui palju sa selle kauba eest maksid?");
-            double kauba = double.Parse(Console.ReadLine());
-            double kaubahind = kauba / 0.70;
-            Console.WriteLine($"Algne hind: {kaubahind}");
 
-            Console.WriteLine("Mis on teie temperatuur?");
-            int temperatuur = int.Parse(Console.ReadLine());
-            if (temperatuur > 18)
-            {
-                Console.WriteLine("Temperatuur ületab!");
-            }
-            else
-            {
-                Console.WriteLine("Temperatuur sobib!");
-            }
+
+
+
+
+
+            // List<string> nimed=new List<string>();
+            //for (int i = 0; i < 10; i++)
+            // {
+            //  Console.WriteLine($" {i + 1}. Nimi: ");
+            //  nimed.Add(Console.ReadLine());
+            //}
+
+
+            // foreach (var item in nimed)
+            //{
+            // Console.WriteLine(item);
+            //}
+
+
+
+
+            //int[] arvud = new int[10];
+            //int j = 0;
+            //while (j < 10)
+            //{
+            // Console.WriteLine(j + 1);
+            // arvud[j] = rnd.Next(1, 101);
+            // j++;
+            // }
+            //foreach (var item in arvud)
+            //{
+            //   Console.WriteLine(item);
+            //}
+
+            // List<Isik> isikud =  new List<Isik>();
+            // j = 0;
+            // do
+            // {
+            // Console.WriteLine(j + 1);
+            //  Isik isik = new Isik();
+            //  Console.WriteLine("Eesnimi : ");
+            // isik.eesnimi = Console.ReadLine();
+            // isikud.Add(isik);
+            //  j++;
+            // } while (j<10);
+            // Console.WriteLine($"Kokku on {isikud.Count()} isikud");
+            //foreach (Isik isik in isikud)
+            //{
+            //    isik.Prindi_andmed();
+            // }
+            // Console.WriteLine($"Kolmandal kohal on {isikud[2].eesnimi} isik");
+
+
+
+
+
+
+
+
+
+
+
+            // int kuu_number = rnd.Next(1, 12);
+            // string nimetus = Osa1_funktsioonid.Kuu_nimetus(kuu_number);
+            //Console.WriteLine($"Nr: {kuu_number}-{nimetus}");
+            // Console.WriteLine("Kas tahad dekodeerida arv-->nimutusse ?");
+            //string vastus = Console.ReadLine();
+            //if (vastus.ToLower() != "jah")
+            //{
+            // Console.WriteLine("Ei taha, siis ei taha");
+            // }
+            //else
+            //  {
+            // try
+            // {
+            //   Console.Write("Nr: ");
+            //  kuu_number = int.Parse(Console.ReadLine());
+            //  Console.Write(Osa1_funktsioonid.Hooaeg(kuu_number));
+            //  }
+            // catch (Exception e)
+            //  {
+            //     Console.WriteLine(e);
+            // }
+
+            // }
+
+            //  Console.WriteLine("Mis on sinu nimi on: ?");
+            // string vastus2 = Console.ReadLine();
+            //  if (vastus2.ToLower() != "juku")
+            //  {
+            //     Console.WriteLine("Me ei lähe kinno!");
+            //  }
+            // else
+            // {
+            //    try
+            //    {
+            //    Console.Write("Kui vana sa oled : ?");
+            //    int vastus3 = int.Parse(Console.ReadLine());
+            //    Console.Write(Osa1_funktsioonid.Juku(vastus3));
+            // }
+            // catch (Exception e)
+            // {
+            //   Console.WriteLine(e);
+            // }
+            //  }
+
+            //  Console.WriteLine("Mis on sinu nimi on: ?");
+            // string nimi1 = Console.ReadLine();
+            // Console.WriteLine("Aga mis on sinu nimi on: ?");
+            //string nimi2 = Console.ReadLine();
+            //if (nimi1.ToLower() == "martin" || nimi2.ToLower() == "illia")
+            // {
+            // Console.WriteLine("Te olete naabrid!");
+            // }
+            // else
+            //{
+            //Console.WriteLine("Ei olete naabrid!");
+            //  }
+
+            //Console.WriteLine("Sisesta esimese seina pikkus: ");
+            //int seina1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Sisesta teine seina pikkus: ");
+            //int seina2 = int.Parse(Console.ReadLine());
+            // int põrandapind = seina1 * seina2;
+            //Console.WriteLine("Kas soovite teha remonti?");
+            //string vastuss = Console.ReadLine();
+            //if (vastuss.ToLower() != "jah")
+            //{
+            //   Console.WriteLine("Ei taha, siis ei taha");
+            // }
+            //else
+            //{
+            // Console.WriteLine("Kui palju maksab ruutmeetri: ?");
+            //  int ruutmeentri = int.Parse(Console.ReadLine());
+            // int hind = põrandapind / ruutmeentri;
+            // Console.WriteLine($"Põranda vahetamise maksumus: {hind}");
+            // }
+
+            // Console.WriteLine("Kui palju sa selle kauba eest maksid?");
+            // double kauba = double.Parse(Console.ReadLine());
+            //double kaubahind = kauba / 0.70;
+            //Console.WriteLine($"Algne hind: {kaubahind}");
+
+            // Console.WriteLine("Mis on teie temperatuur?");
+            // int temperatuur = int.Parse(Console.ReadLine());
+            // if (temperatuur > 18)
+            // {
+            //Console.WriteLine("Temperatuur ületab!");
+            //}
+            //else
+            //{
+            //Console.WriteLine("Temperatuur sobib!");
+            //}
 
 
 

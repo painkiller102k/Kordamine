@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kordamine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4dff93367364a2309b5ae17e681dd7790c73bb0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kordamine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kordamine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
