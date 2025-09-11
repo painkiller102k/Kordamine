@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Kordamine
 {
@@ -14,28 +9,95 @@ namespace Kordamine
             Console.OutputEncoding = Encoding.UTF8;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
-            Random rnd = new Random(); // выполняется рандом
-            //Funktsionid 2 Massiivid, List,  Kordused
-            //#1
+
+            // #1
             int[] massive = Osa3.ArvuTootlus.GenereeriRuudud(-10, 10);
+            Console.WriteLine("Genereeritud ruudud:");
             foreach (int m in massive)
             {
                 Console.WriteLine(m);
             }
-            //#2
-            double[] arvud = Osa33.Tekstist_arvud();
-            var tulemus = Osa33.AnaluusiArve(arvud);
-            Console.WriteLine($"Summa : {tulemus.Item1:F2}, Keskmine : {tulemus.Item2:F2}, Korrutis : {tulemus.Item3:F2}");
+
+            // #2
+            // double[] arvud = Osa33.Tekstist_arvud();
+            // var tulemus = Osa33.AnaluusiArve(arvud);
+            // Console.WriteLine($"Summa : {tulemus.Item1:F2}, Keskmine : {tulemus.Item2:F2}, Korrutis : {tulemus.Item3:F2}");
+
+            // #3
+            List<Osa33.Inimene> inimesed = new List<Osa33.Inimene>();
+
+            Console.WriteLine("\nSisesta 5 inimese andmed:");
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Sisesta nimi: ");
+                string nimi = Console.ReadLine();
+
+                Console.Write("Sisesta vanus: ");
+                int vanus;
+                while (!int.TryParse(Console.ReadLine(), out vanus))
+                {
+                    Console.Write("Palun sisesta korrektne täisarv: ");
+                }
+
+                inimesed.Add(new Osa33.Inimene(nimi, vanus));
+            }
+
+            Osa33.Statistika.TeeStatistika(inimesed);
+
+            // #4
+            Console.WriteLine("Sisesta märksõna");
+            string marksõna = Console.ReadLine();
+            string frass = Console.ReadLine();
+            Osa33.KuniMarksonani(marksõna, frass);
+            // #5
+            Osa33.Arvanumber();
+            // #6
+            double[] arvud = new double[4];
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine($"Sisesta {i + 1}. arv (0–9): ");
+                arvud[i] = Convert.ToDouble(Console.ReadLine());
+            }
+
+            int tulemus = Osa33.SuurimNeljarv(arvud);
+            if (tulemus != -1)
+            {
+                Console.WriteLine("Suurim võimalik arv: " + tulemus);
+            }
+            //#7
+            Console.Write("Sisesta ridade arv: ");
+            int read = int.Parse(Console.ReadLine());
+
+            Console.Write("Sisesta veergude arv: ");
+            int veerud = int.Parse(Console.ReadLine());
+
+            int[,] tabel = Osa33.GenereeriKorrutustabel(read, veerud);
+
+            Console.WriteLine();
+            Console.Write("Sisesta esimene arv: ");
+            int a = int.Parse(Console.ReadLine());
+
+            Console.Write("Sisesta teine arv: ");
+            int b = int.Parse(Console.ReadLine());
+
+            if (a >= 1 && a <= read && b >= 1 && b <= veerud)
+            {
+                Console.WriteLine($"{a} x {b} = {tabel[a - 1, b - 1]}");
+            }
+            else
+            {
+                Console.WriteLine("Arvud on väljaspool tabeli piire!");
+            }
+        }
+    }
+}
 
 
 
 
 
-
-
-
-
-            // List<string> nimed=new List<string>();
+// List<string> nimed=new List<string>();
             //for (int i = 0; i < 10; i++)
             // {
             //  Console.WriteLine($" {i + 1}. Nimi: ");
@@ -210,6 +272,3 @@ namespace Kordamine
 
             // float vastus = Osa1_funktsioonid.Kalkulaator(f, a); // переменная vastus в типе данных float выполняет функцию из другого файла со значениями f,a
             //Console.WriteLine($"Kalkulaatori tulemus: {vastus}"); // показывает в консоль ответ
-        }
-    }
-}
