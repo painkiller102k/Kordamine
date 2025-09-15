@@ -132,7 +132,7 @@ namespace Kordamine
                 if (number == n)
                 {
                     Console.WriteLine("See on õige number");
-                    return; // сразу завершаем игру
+                    return;
                 }
                 else if (number < n)
                 {

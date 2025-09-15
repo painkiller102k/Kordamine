@@ -11,12 +11,12 @@ namespace Kordamine
             Console.ForegroundColor = ConsoleColor.White;
 
             // #1
-            int[] massive = Osa3.ArvuTootlus.GenereeriRuudud(-10, 10);
-            Console.WriteLine("Genereeritud ruudud:");
-            foreach (int m in massive)
-            {
-                Console.WriteLine(m);
-            }
+            //int[] massive = Osa3.ArvuTootlus.GenereeriRuudud(-10, 10);
+            //Console.WriteLine("Genereeritud ruudud:");
+            //foreach (int m in massive)
+            //{
+            // Console.WriteLine(m);
+            //}
 
             // #2
             // double[] arvud = Osa33.Tekstist_arvud();
@@ -24,74 +24,123 @@ namespace Kordamine
             // Console.WriteLine($"Summa : {tulemus.Item1:F2}, Keskmine : {tulemus.Item2:F2}, Korrutis : {tulemus.Item3:F2}");
 
             // #3
-            List<Osa33.Inimene> inimesed = new List<Osa33.Inimene>();
+            //List<Osa33.Inimene> inimesed = new List<Osa33.Inimene>();
 
-            Console.WriteLine("\nSisesta 5 inimese andmed:");
+            //Console.WriteLine("\nSisesta 5 inimese andmed:");
 
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write("Sisesta nimi: ");
-                string nimi = Console.ReadLine();
+            //for (int i = 0; i < 5; i++)
+            //{
+            //Console.Write("Sisesta nimi: ");
+            //string nimi = Console.ReadLine();
 
-                Console.Write("Sisesta vanus: ");
-                int vanus;
-                while (!int.TryParse(Console.ReadLine(), out vanus))
-                {
-                    Console.Write("Palun sisesta korrektne täisarv: ");
-                }
+            //Console.Write("Sisesta vanus: ");
+            //int vanus;
+            // while (!int.TryParse(Console.ReadLine(), out vanus))
+            //{
+            //Console.Write("Palun sisesta korrektne täisarv: ");
+            //}
 
-                inimesed.Add(new Osa33.Inimene(nimi, vanus));
-            }
+            // inimesed.Add(new Osa33.Inimene(nimi, vanus));
+            // }
 
-            Osa33.Statistika.TeeStatistika(inimesed);
+            //Osa33.Statistika.TeeStatistika(inimesed);
 
             // #4
-            Console.WriteLine("Sisesta märksõna");
-            string marksõna = Console.ReadLine();
-            string frass = Console.ReadLine();
-            Osa33.KuniMarksonani(marksõna, frass);
+            //Console.WriteLine("Sisesta märksõna");
+            //string marksõna = Console.ReadLine();
+            //string frass = Console.ReadLine();
+            //Osa33.KuniMarksonani(marksõna, frass);
             // #5
-            Osa33.Arvanumber();
+            //Osa33.Arvanumber();
             // #6
-            double[] arvud = new double[4];
-            for (int i = 0; i < 4; i++)
-            {
-                Console.WriteLine($"Sisesta {i + 1}. arv (0–9): ");
-                arvud[i] = Convert.ToDouble(Console.ReadLine());
-            }
+            //double[] arvud = new double[4];
+            //for (int i = 0; i < 4; i++)
+            //{
+            // Console.WriteLine($"Sisesta {i + 1}. arv (0–9): ");
+            //  arvud[i] = Convert.ToDouble(Console.ReadLine());
+            // }
 
-            int tulemus = Osa33.SuurimNeljarv(arvud);
-            if (tulemus != -1)
-            {
-                Console.WriteLine("Suurim võimalik arv: " + tulemus);
-            }
+            //int tulemus = Osa33.SuurimNeljarv(arvud);
+            //if (tulemus != -1)
+            //{
+            //Console.WriteLine("Suurim võimalik arv: " + tulemus);
+            // }
+
             //#7
-            Console.Write("Sisesta ridade arv: ");
-            int read = int.Parse(Console.ReadLine());
+            //{
+            //Console.Write("Sisesta ridade arv: ");
+            //int read = int.Parse(Console.ReadLine());
 
-            Console.Write("Sisesta veergude arv: ");
-            int veerud = int.Parse(Console.ReadLine());
+            //Console.Write("Sisesta veergude arv: ");
+            //int veerud = int.Parse(Console.ReadLine());
 
-            int[,] tabel = Osa33.GenereeriKorrutustabel(read, veerud);
+            // int[,] tabel = Osa33.GenereeriKorrutustabel(read, veerud);
 
-            Console.WriteLine();
-            Console.Write("Sisesta esimene arv: ");
-            int a = int.Parse(Console.ReadLine());
+            // Console.WriteLine();
+            // Console.Write("Sisesta esimene arv: ");
+            // int a = int.Parse(Console.ReadLine());
 
-            Console.Write("Sisesta teine arv: ");
-            int b = int.Parse(Console.ReadLine());
+            //Console.Write("Sisesta teine arv: ");
+            //int b = int.Parse(Console.ReadLine());
 
-            if (a >= 1 && a <= read && b >= 1 && b <= veerud)
-            {
-                Console.WriteLine($"{a} x {b} = {tabel[a - 1, b - 1]}");
-            }
-            else
-            {
-                Console.WriteLine("Arvud on väljaspool tabeli piire!");
-            }
+            //if (a >= 1 && a <= read && b >= 1 && b <= veerud)
+            //{
+            // Console.WriteLine($"{a} x {b} = {tabel[a - 1, b - 1]}");
+            //}
+            //else
+            //{
+            //Console.WriteLine("Arvud on väljaspool tabeli piire!");
+            // }
+            //}
+
+            // Failitöötlus
+            //Osa4.Kirjuta_failisse();
+            //Console.WriteLine("Faili nimi: ");
+            //string failinimi = Console.ReadLine();
+            //Osa4.Failide_lugemine(failinimi);
+            //Console.WriteLine("Ridade lugemine ja muudatused:");
+            // Osa4.Ridade_lugemine();
+
+            // #1
+            //List<Osa4.Toode> tooted = Osa4.LoeTootedFailist();
+            //Console.WriteLine("Sisesta oma nimi: ");
+            //string nimi = Console.ReadLine();
+            // Console.WriteLine("Sisesta vanus: ");
+            // int vanus = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Sisesta sugu (M/N): ");
+            // string sugu = Console.ReadLine();
+            //Console.WriteLine("Sisesta pikkus cm: ");
+            // double pikkus = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Sisesta kaal kg: ");
+            //double kaal = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Sisesta aktiivsuse tase (1.2 - 1.9): ");
+            //double aktiivsus = double.Parse(Console.ReadLine());
+
+            // Osa4.Inimene kasutaja = new Osa4.Inimene(nimi, vanus, sugu, pikkus, kaal, aktiivsus);
+
+            //double paevakogus = kasutaja.KaloridPäevas();
+            //Console.WriteLine($"{nimi}, sinu päevane kalorivajadus on: {paevakogus:F0} kcal.");
+
+            // Console.WriteLine($"Siin on, kui palju 100g-tooteid saad süüa, et katta päevane vajadus:");
+
+            //foreach (Osa4.Toode t in tooted)
+            //{
+            //double grammid = paevakogus / t.Kalorid100g * 100;
+            //Console.WriteLine($"{t.Nimi}: {grammid:F0} g");
+            //}
+
+            //Console.WriteLine("Failist kuud:");
+            // List<string> kuud = Osa4.Ridade_lugemine();
+            // #2
+            Osa4.OkrugidJaLinnad();
+            // #3
+            Osa5.Ulesanne3.Analuusiõpilane();
+            // #4
+            Osa5.Ulesanne4.FilmiAnalüüs();
         }
     }
 }
+
 
 
 

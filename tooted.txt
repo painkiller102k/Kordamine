@@ -1,0 +1,6 @@
+Õun,52
+Leib,265
+Kanafilee,165
+Sandwich,110
+BigMac,257
+Watermelon,30
