@@ -10,7 +10,7 @@ namespace Kordamine
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
 
-            // #1
+            // #osa1
             //int[] massive = Osa3.ArvuTootlus.GenereeriRuudud(-10, 10);
             //Console.WriteLine("Genereeritud ruudud:");
             //foreach (int m in massive)
@@ -18,7 +18,7 @@ namespace Kordamine
             // Console.WriteLine(m);
             //}
 
-            // #2
+            // #osa2
             // double[] arvud = Osa33.Tekstist_arvud();
             // var tulemus = Osa33.AnaluusiArve(arvud);
             // Console.WriteLine($"Summa : {tulemus.Item1:F2}, Keskmine : {tulemus.Item2:F2}, Korrutis : {tulemus.Item3:F2}");
@@ -101,7 +101,7 @@ namespace Kordamine
             //Console.WriteLine("Ridade lugemine ja muudatused:");
             // Osa4.Ridade_lugemine();
 
-            // #1
+            // #1 osa5
             //List<Osa4.Toode> tooted = Osa4.LoeTootedFailist();
             //Console.WriteLine("Sisesta oma nimi: ");
             //string nimi = Console.ReadLine();
@@ -131,11 +131,11 @@ namespace Kordamine
 
             //Console.WriteLine("Failist kuud:");
             // List<string> kuud = Osa4.Ridade_lugemine();
-            // #2
-            Osa4.OkrugidJaLinnad();
-            // #3
+            // #2 osa5
+            Osa5.OkrugidJaLinnad();
+            // #3 osa 5 
             Osa5.Ulesanne3.Analuusiõpilane();
-            // #4
+            // #4 osa 5
             Osa5.Ulesanne4.FilmiAnalüüs();
         }
     }

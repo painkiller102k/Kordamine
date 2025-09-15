@@ -121,74 +121,7 @@ namespace Kordamine
             {
                 Console.WriteLine("Viga faili lugemisel!");
             }
-
             return tooted;
-        }
-
-        public class Inimene
-        {
-            public string Nimi;
-            public int Vanus;
-            public string Sugu;
-            public double Pikkus;
-            public double Kaal;
-            public double Aktiivsustase;
-
-            public Inimene(string nimi, int vanus, string sugu, double pikkus, double kaal, double aktiivsus)
-            {
-                Nimi = nimi;
-                Vanus = vanus;
-                Sugu = sugu;
-                Pikkus = pikkus;
-                Kaal = kaal;
-                Aktiivsustase = aktiivsus;
-            }
-
-            public double KaloridPäevas()
-            {
-                double bmr;
-                if (Sugu.ToUpper() == "M")
-                    bmr = 88.36 + (13.4 * Kaal) + (4.8 * Pikkus) - (5.7 * Vanus);
-                else
-                    bmr = 447.6 + (9.2 * Kaal) + (3.1 * Pikkus) - (4.3 * Vanus);
-
-                return bmr * Aktiivsustase;
-            }
-        }
-
-        public static void OkrugidJaLinnad()
-        {
-            Dictionary<string, string> okrugid = new Dictionary<string, string>()
-            {
-                { "Harjumaa", "Tallinn" },
-                { "Tartumaa", "Tartu" },
-                { "Pärnumaa", "Pärnu" },
-                { "Raplamaa", "Rapla" },
-                { "Lääne-Virumaa", "Rakvere"},
-                { "Järvemaa", "Paide"}
-            };
-
-            Console.WriteLine("Sisesta okrugi nimi:");
-            string okrug = Console.ReadLine();
-
-            if (okrugid.ContainsKey(okrug))
-            {
-                Console.WriteLine("Pealinn: " + okrugid[okrug]);
-            }
-            else
-            {
-                Console.WriteLine("Sellist okrugi pole. Lisa uus!");
-                Console.WriteLine("Sisesta pealinna nimi:");
-                string linn = Console.ReadLine();
-                okrugid.Add(okrug, linn);
-                Console.WriteLine("Lisatud!");
-            }
-
-            Console.WriteLine("Kõik okrugid ja pealinnad:");
-            foreach (var paar in okrugid)
-            {
-                Console.WriteLine(paar.Key + " - " + paar.Value);
-            }
         }
     }
 }

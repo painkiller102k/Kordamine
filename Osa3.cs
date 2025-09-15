@@ -24,7 +24,7 @@ namespace Kordamine
 
     public class Osa3
     {
-        internal class ArvuTootlus
+        internal class ArvuTootlus // # osa3 ulesanne 1
         {
             public static int[] GenereeriRuudud(int min, int max)
             {
@@ -62,7 +62,7 @@ namespace Kordamine
 
     public class Osa33
     {
-        public static double[] Tekstist_arvud()
+        public static double[] Tekstist_arvud() // #osa3 ulesanne 2
         {
             Console.WriteLine("Sisesta arvud koma või tühikuga eraldatult: ");
             string sisend = Console.ReadLine();
@@ -79,7 +79,7 @@ namespace Kordamine
             return arvud;
         }
 
-        public class Inimene
+        public class Inimene // #osa3 ulesanne 3
         {
             public string Nimi;
             public int Vanus;
@@ -107,7 +107,7 @@ namespace Kordamine
             }
         }
 
-        public static string KuniMarksonani(string märksõna, string frass)
+        public static string KuniMarksonani(string märksõna, string frass) // #osa3 ulesanne 4
         {
             do
             {
@@ -118,7 +118,7 @@ namespace Kordamine
             return frass;
         }
 
-        public static void Arvanumber()
+        public static void Arvanumber() // #osa3 ulesanne 5
         {
             Random rnd = new Random();
             int n = rnd.Next(1, 3);
@@ -149,7 +149,7 @@ namespace Kordamine
             Console.WriteLine("Proovid said otsa! Õige number oli: " + n);
         }
 
-        public static int SuurimNeljarv(double[] arvud)
+        public static int SuurimNeljarv(double[] arvud) // #osa3 ulesanne 6
         {
             foreach (double num in arvud)
             {
@@ -169,7 +169,7 @@ namespace Kordamine
 
             return suurim;
         }
-        public static int[,] GenereeriKorrutustabel(int ridadeArv, int veergudeArv)
+        public static int[,] GenereeriKorrutustabel(int ridadeArv, int veergudeArv) // #osa3 ulesanne 7
         {
             int[,] tabel = new int[ridadeArv, veergudeArv];
             for (int i = 0; i < ridadeArv; i++)
